@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imperio Barber Shop | Santa Cruz Cabrália</title>
+  <meta name="description" content="Barbearia premium em Santa Cruz Cabrália. Agende seu horario com estilo, confianca e qualidade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <nav class="navbar container">
+      <a href="#inicio" class="brand" aria-label="Imperio Barber Shop">
+        <span class="brand-main">IMPERIO</span>
+        <span class="brand-sub">BARBER SHOP</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicos">Servicos</a></li>
+        <li><a href="#profissionais">Profissionais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <a href="#agendamento" class="btn btn-primary nav-cta">Agendar Horario</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-kicker">Barbearia Premium em Santa Cruz Cabrália</p>
+        <h1>ESTILO, PRECISAO E PRESENCA EM CADA DETALHE</h1>
+        <p class="hero-description">
+          Atendimento profissional, ambiente sofisticado e acabamento impecavel para quem valoriza sua imagem.
+        </p>
+        <div class="hero-actions">
+          <a href="#agendamento" class="btn btn-primary">Agendar Agora</a>
+          <a href="#servicos" class="btn btn-outline">Ver Servicos</a>
+        </div>
+        <div class="hero-highlights" aria-label="Diferenciais da barbearia">
+          <span>Atendimento especializado</span>
+          <span>Ambiente premium</span>
+          <span>Alta pontualidade</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Nossos Servicos</p>
+          <h2>Experiencia completa de barbearia</h2>
+        </div>
+        <div class="cards-grid services-grid" id="servicesGrid">
+          <article class="card service-card">
+            <h3>Carregando servicos...</h3>
+            <p>Aguarde um instante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section professionals" id="profissionais">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Time Imperio</p>
+          <h2>Profissionais de alto nivel</h2>
+        </div>
+        <div class="cards-grid professionals-grid" id="professionalsGrid">
+          <article class="card pro-card">
+            <div class="pro-avatar">...</div>
+            <h3>Carregando profissionais...</h3>
+            <p>Aguarde um instante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Depoimentos</p>
+          <h2>Quem corta aqui sempre volta</h2>
+        </div>
+        <div class="cards-grid testimonials-grid">
+          <article class="card testimonial-card">
+            <div class="testimonial-header">
+              <strong>Willian Carvalho Santos</strong>
+              <span>5 estrelas • 4 anos atras</span>
+            </div>
+            <p>"Otimo atendimento, ambiente climatizado e bem localizado na cidade e o preco justo."</p>
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-header">
+              <strong>Fernando Marin</strong>
+              <span>5 estrelas • 4 anos atras</span>
+            </div>
+            <p>"Atendimento diferenciado, pessoal muito gente boa e corte de qualidade, recomendo."</p>
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-header">
+              <strong>Cleiton Otto</strong>
+              <span>5 estrelas • 4 anos atras</span>
+            </div>
+            <p>"Excelente profissional, ja cortei o cabelo varias vezes com o Pedro. Recomendo!"</p>
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-header">
+              <strong>Anna Luhrocha</strong>
+              <span>5 estrelas • 2 anos atras</span>
+            </div>
+            <p>"Fui muito bem atendida, lugar maravilhoso."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="agendamento">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Agendamento</p>
+          <h2>Reserve seu horario em poucos passos</h2>
+        </div>
+
+        <form class="booking-form card" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required />
+              <small class="field-error" id="errorNome"></small>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" required />
+              <small class="field-error" id="errorTelefone"></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="profissional">Profissional</label>
+              <select id="profissional" name="profissional" required>
+                <option value="">Carregando...</option>
+              </select>
+              <small class="field-error" id="errorProfissional"></small>
+            </div>
+            <div class="form-group">
+              <label for="servico">Servico</label>
+              <select id="servico" name="servico" required>
+                <option value="">Carregando...</option>
+              </select>
+              <small class="field-error" id="errorServico"></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required />
+              <small class="field-error" id="errorData"></small>
+            </div>
+            <div class="form-group">
+              <label for="hora">Horario</label>
+              <select id="hora" name="hora" required>
+                <option value="">Selecione profissional, servico e data</option>
+              </select>
+              <small class="field-error" id="errorHora"></small>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">Confirmar Agendamento</button>
+          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-content">
+      <div>
+        <h3>Imperio Barber Shop</h3>
+        <p>Rua Exemplo, 123 - Santa Cruz Cabrália</p>
+        <p>Seg a Sab: 08:00-11:30 | 14:00-18:30</p>
+      </div>
+      <div>
+        <p>WhatsApp: (00) 00000-0000</p>
+        <p>Instagram: @imperiobarbershop</p>
+        <a href="#agendamento" class="btn btn-outline btn-sm">Agendar</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Imperio Barber Shop. Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
